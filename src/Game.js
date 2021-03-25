@@ -7,32 +7,52 @@ const Deck = require('../src/Deck');
 
 
 class Game {
-  constructor() {
-    this.currentRound = this.start();
-  }
+  constructor(nothing) {
+    this.currentRound = nothing || this.start();
+  };
 
   printMessage(deck, round) {
-      console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
+    console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
 -----------------------------------------------------------------------`)
-  }
+  };
 
   printQuestion(round) {
-      util.main(round);
-  }
+    util.main(round);
+  };
 
   start() {
-    let cards = [];
-    for (let i = 0; i < prototypeQuestions.length; i++) {
-      let { id, question, answers, correctAnswer } = prototypeQuestions[i];
-      const card = new Card(id, question, answers, correctAnswer);
-      cards.push(card);
-    }
-    const deck = new Deck(cards);
-    const round = new Round(deck);
+    const cards = this.createCards();
+    const deck = this.createDeck(cards);
+    const round = this.createRound(deck);
     this.printMessage(deck, round);
     this.printQuestion(round);
     return round;
-  }
-}
+  };
+
+  createCards() {
+    let cards = [];
+    for (let i = 0; i < prototypeQuestions.length; i++) {
+      let {
+        id,
+        question,
+        answers,
+        correctAnswer
+      } = prototypeQuestions[i];
+      const card = new Card(id, question, answers, correctAnswer);
+      cards.push(card);
+    };
+    return cards;
+  };
+
+  createDeck(cards) {
+    const deck = new Deck(cards);
+    return deck;
+  };
+
+  createRound(deck) {
+    const round = new Round(deck);
+    return round
+  };
+};
 
 module.exports = Game;
