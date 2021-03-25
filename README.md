@@ -1,79 +1,51 @@
-# FlashCards Starter Kit
+# Flashcards
 
-## Fork This Repo
-
-On the top right corner of this page, click the **Fork** button.
-
-## Setup
-
-Clone down the forked repo (from your GitHub). Since you don't want to name your project "flashcards-starter", you can use an optional argument when you run `git clone` (you replace the `[...]` with the terminal command arguments):
-
-```bash
-git clone [remote-address] [what you want to name the repo]
-```
-
-Once you have cloned the repo, change into the directory and install the library dependencies. Run:
-
-```bash
-npm install
-```
-
-To verify that it is setup correctly, run `npm test` in your terminal. You should have 5 pending tests in your `Card` test file that show up.
-
-Running `node index.js` from the root of your project should result in the following message being displayed in your terminal: 
-
-```bash
-Node server running on port 3000
-```
-
-*Note that you will not need to you run your server until you are instantiating your `Game` class in Iteration 3. Prior to that, you should be using TDD to drive your code. You should check the functionality of your application by running your tests via `npm test`.*
+#### A set of virtual flash cards to test your javascript knowledge!
 
 
-## Where to Add Your Code
+## Overview
 
-### JavaScript
+* Flashcards is a set of 30 virtual flashcards that will quiz you on your javascript
+knowledge directly in your console. Each card has 3 multiple choice answers that you
+can select with your arrow keys in the console. When you make a guess, you will receive
+feedback on your answer. When all 30 questions have been answered, the round is over
+and you will see the percent of questions you answered correctly!
 
-**Create all of your feature code files in the `src` directory.**
+## Set-up
 
-We will be using the `module.exports` and `require` syntax to share code across files.
+* Create a repository and clone it to your local computer
+* Open it in your text editor
+* Read the `README.md`
+* In the terminal run the command `node index.js` for initial deployment and interaction with app
 
-## How to View Your Code in Action
+## Project Links
 
-Once you are working through Iteration 3, you will want to start your server to test your functionality.
-In the terminal, run:
+* [Repo](https://github.com/mcraig2342/flashcards)
 
-```bash
-node index.js
-```
+## Contributors
 
-When the game is functioning appropriately, you will be prompted for each question, have the opportunity to select an answer, and will be given feedback. You will be able to play through the entire deck of cards:
+* [Matt Craig](https://github.com/mcraig2342)
 
-![flash cards example gif](https://media.giphy.com/media/1zkb1q58eTiTH6D7wc/giphy.gif)
 
----
+## Road Map
 
-## Test Files Organization
+##### Future Iterations Should Include:
 
-Similar to feature code, your test code needs to be put in a specific place for it to run successfully.
+* A new set of cards to play a second round with.
+* A timer to show how long you took to finish the round.
+* Additional functionality so if a user gets less than 90% correct, they repeat
+the round.
 
-**Put all of your test files in the `test` directory.** As a convention, all test filenames should end with `-test.js`. For instance: `Round-test.js`.
+## Preview
 
-## Running Your Tests
+<p align="left">Initialize Game</br>
+ <img width="1000" height="500" src="./assets/Initialization.png">
+</p>
 
-Run your test suite using the command:
+<p align="left">Answer Feedback</br>
+ <img width="1000" height="500" src="./assets/Feedback.png">
+</p>
 
-```bash
-npm test
-```
-
-The test results will output to the terminal.
-
----
-
-## Linting Your Code
-
-Run the command in your terminal `npm run lint` to run the linter on your JavaScript code. There will be errors and warnings right from the start in this starter kit - the linter is still running successfully.
-
-Your linter will look at the JavaScript files you have within the `src` directory and the `test` directory. 
-
----
+<p align="left">Round Over</br>
+ <img width="1000" height="500" src="./assets/Round Over.png">
+</p>
